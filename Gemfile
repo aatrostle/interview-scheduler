@@ -1,12 +1,13 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
+gem 'dynamic_form', '1.1.4'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
-
+# gem 'pg'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -21,6 +22,24 @@ group :assets do
 end
 
 gem 'jquery-rails'
+
+group :text, :development do
+  gem 'rspec-rails', '~> 2.11'
+  gem 'pry-rails'
+  gem 'pry-doc'
+  gem 'pry-debugger'
+  gem 'launchy'
+end
+
+group :test do
+  gem 'capybara', '1.1.2'
+  gem 'factory_girl', '2.6.4'
+  gem 'simplecov', :require => false
+  gem 'email_spec', '1.2.1'
+end
+
+gem 'devise', '2.1.0'
+gem 'cancan', '1.6.7'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

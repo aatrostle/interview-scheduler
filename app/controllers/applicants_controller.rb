@@ -23,4 +23,11 @@ class ApplicantsController < ApplicationController
     @applicant = Applicant.find(params[:id])
   end
 
+  def destroy
+    @applicant = Applicant.find(params[:id])
+    @applicant.destroy
+    flash[:notice] = "Applicant has been deleted."
+    redirect_to applicants_path
+  end
+
 end

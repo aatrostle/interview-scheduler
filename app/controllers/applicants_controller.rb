@@ -13,7 +13,8 @@ class ApplicantsController < ApplicationController
       flash[:notice] = "Applicant has been created."
       redirect_to @applicant
     else
-      #nothing yet
+      flash[:alert] = "Applicant has not been created."
+      render :action => "new"
     end
   end
 

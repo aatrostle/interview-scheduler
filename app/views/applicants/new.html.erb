@@ -1,6 +1,7 @@
 <h2>New Applicant</h2>
 
 <%= form_for(@applicant) do |f| %>
+  <%= f.error_messages %>
   <p>
     <%= f.label :name %>
     <%= f.text_field :name %>
